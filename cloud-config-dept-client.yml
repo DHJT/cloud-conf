@@ -24,13 +24,6 @@ spring:
 server:
   port: 8202
 spring:
-  application: cloud-config-dept-client
-eureka:
-  client:
-    service-url:
-      defaultZone: http://eureka-dev.com:7001/eureka/
-
-spring:
   profiles: test
   application:
     name: cloud-config-dept-client-test
@@ -45,6 +38,11 @@ spring:
       initial-size: 5                                       # 初始化连接数
       max-total: 5                                          # 最大连接数
       max-wait-millis: 200                                  # 等待连接获取的最大超时时间
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-dev.com:7001/eureka/
 ---
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
