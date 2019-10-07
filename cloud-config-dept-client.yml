@@ -8,7 +8,7 @@ server:
 spring:
   profiles: dev
   application:
-    name: cloud-config-dept-client-dev
+    name: cloud-config-dept-client
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
     driver-class-name: org.mariadb.jdbc.Driver              # mariadb驱动包
@@ -26,7 +26,7 @@ server:
 spring:
   profiles: test
   application:
-    name: cloud-config-dept-client-test
+    name: cloud-config-dept-client
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
     driver-class-name: org.mariadb.jdbc.Driver              # mariadb驱动包
