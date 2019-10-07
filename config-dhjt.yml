@@ -1,5 +1,24 @@
-dhjt:
-  name: test
-  author: dhjt
-  email: dhjt11@qq.com
-  lastUpdateTime: '2019-10-07'
+spring:
+  profiles:
+    active:
+    - dev
+---
+server:
+  port: 8201
+spring:
+  profiles: dev
+  application: cloud-config-client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-dev.com:7001/eureka/
+---
+server:
+  port: 8202
+spring:
+  profiles: test
+  application: cloud-config-client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-dev.com:7001/eureka/
